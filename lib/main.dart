@@ -1,26 +1,34 @@
-import 'package:e_app/Views/login.dart';
- // Import your LoginScreen
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';  // Import GetX package
+import 'package:get/get.dart';
+import 'package:firebase_core/firebase_core.dart'; // Import this to initialize Firebase
+import 'firebase_options.dart'; // Ensure the file exists and is correctly configured
+import 'Views/login.dart'; // Ensure this file exists and contains LoginScreen
 
-void main() {
+void main() async {
+  // Ensure Flutter widgets are initialized before Firebase setup
+  WidgetsFlutterBinding.ensureInitialized();
+
+  // Initialize Firebase with options for the current platform
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: false, // Disables the debug banner
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+        useMaterial3: true, // Enable Material 3
       ),
-      home: LoginScreen(),
+      home: LoginScreen(), // The first screen displayed
     );
   }
 }

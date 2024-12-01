@@ -27,6 +27,7 @@ class SliderSection extends StatelessWidget {
             ),
             borderRadius: BorderRadius.circular(10), // Optional: rounded corners
           ),
+          
         );
       },
       options: CarouselOptions(
