@@ -10,11 +10,14 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: true,
       body: Padding(
         padding: const EdgeInsets.all(20),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center, // Centers content vertically
-          crossAxisAlignment: CrossAxisAlignment.center, // Centers content horizontally
+          mainAxisAlignment:
+              MainAxisAlignment.center, // Centers content vertically
+          crossAxisAlignment:
+              CrossAxisAlignment.center, // Centers content horizontally
           children: [
             // Centering the login and subtext here
             const Text(

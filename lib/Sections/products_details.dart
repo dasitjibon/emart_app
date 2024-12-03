@@ -87,16 +87,14 @@ class ProductsDetailsScreen extends StatelessWidget {
         //color: AppColors.primaryColor,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [ElevatedButton(onPressed: () {},
-           child: Text('Add Cart',
-           style: TextStyle(
-            color: AppColors.primaryColor
-            
-           ),
-           
-           
-           ))
-           ],
+          children: [
+            ElevatedButton(
+                onPressed: () {},
+                child: Text(
+                  'Add Cart',
+                  style: TextStyle(color: AppColors.primaryColor),
+                ))
+          ],
         ),
       ),
     );

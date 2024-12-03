@@ -34,21 +34,24 @@ class HomeScreen extends StatelessWidget {
         ],
       ),
       body: SingleChildScrollView(
-        child: Column(
-          children: [
-            // Category Section
-            CategorySection(),
-            SizedBox(height: 10),
-
-            // Slider Section
-            SliderSection(),
-            SizedBox(height: 10),
-
-            // Products Section
-            ProductScreen(),
-         
-
-          ],
+        child: Padding(
+          padding: const EdgeInsets.all(15),
+          child: Column(
+            children: [
+              // Category Section
+              CategorySection(),
+              SizedBox(height: 10),
+          
+              // Slider Section
+              SliderSection(),
+              SizedBox(height: 10),
+          
+              // Products Section
+              ProductScreen(),
+           
+          
+            ],
+          ),
         ),
       ),
     );
